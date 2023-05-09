@@ -1,5 +1,5 @@
-import { Card, Image, Text, Badge, Group, ActionIcon, Button, Stack } from '@mantine/core';
-import { IconArrowRight, IconThumbUp } from '@tabler/icons-react';
+import { Card, Image, Text, Group, Button, Stack } from '@mantine/core';
+import { IconArrowRight } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from 'usehooks-ts';
 import { useEffect, useRef, useState } from 'react';
