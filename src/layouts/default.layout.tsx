@@ -1,0 +1,108 @@
+import {
+  AppShell,
+  Header,
+  Group,
+  Title,
+  ActionIcon,
+  Anchor,
+  Button,
+  useMantineColorScheme,
+  MediaQuery,
+  CSSObject,
+} from '@mantine/core';
+import { IconBrandGithub, IconBookmarks } from '@tabler/icons-react';
+import { Link, Outlet } from 'react-router-dom';
+
+import AutoScrollToTop from '~/components/AutoScrollToTop';
+import ThemeSwitcher from '~/components/ThemeSwitcher';
+
+export default function DefaultLayout() {
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
+
+  const hidden: CSSObject = {
+    display: 'none',
+  };
+  return (
+    <AppShell
+      header={
+        <Header height={60} p='xs'>
+          <Group position='apart' align='center'>
+            {/* In Desktop */}
+            <MediaQuery smallerThan='sm' styles={hidden}>
+              <Anchor
+                component={Link}
+                to='/'
+                color={dark ? 'gray' : 'dark'}
+                sx={{
+                  '&:hover': {
+                    textDecoration: 'none',
+                  },
+                }}
+              >
+                <Title order={1}>👾 Pkmn-Catcher</Title>
+              </Anchor>
+            </MediaQuery>
+            {/* In Mobile */}
+            <MediaQuery largerThan='sm' styles={hidden}>
+              <Anchor
+                component={Link}
+                to='/'
+                color={dark ? 'gray' : 'dark'}
+                sx={{
+                  '&:hover': {
+                    textDecoration: 'none',
+                  },
+                }}
+              >
+                <Title order={1}>👾 Pkmn</Title>
+              </Anchor>
+            </MediaQuery>
+            <Group position='right' align='center' spacing='xs' mr='sm'>
+              {/* In Desktop */}
+              <MediaQuery smallerThan='sm' styles={hidden}>
+                <Button leftIcon={<IconBookmarks />} component={Link} to='/bookmarks'>
+                  My Bookmarks
+                </Button>
+              </MediaQuery>
+              {/* In Mobile */}
+              <MediaQuery largerThan='sm' styles={hidden}>
+                <ActionIcon
+                  variant='filled'
+                  color='blue'
+                  size='lg'
+                  component={Link}
+                  to='/bookmarks'
+                  title='My Bookmarks'
+                >
+                  <IconBookmarks />
+                </ActionIcon>
+              </MediaQuery>
+              <ActionIcon
+                variant='filled'
+                component='a'
+                color={dark ? 'gray' : 'dark'}
+                href='https://github.com/mazipan/pkmn-catcher'
+                target='_blank'
+                rel='noopener noreferrer'
+                size='lg'
+                title='GitHub'
+              >
+                <IconBrandGithub />
+              </ActionIcon>
+              <ThemeSwitcher />
+            </Group>
+          </Group>
+        </Header>
+      }
+      footer={
+        <Group position='center' my='md'>
+          👾 Pkmn-Catcher © 2023, Crafted by mazipan
+        </Group>
+      }
+    >
+      <AutoScrollToTop />
+      <Outlet />
+    </AppShell>
+  );
+}
