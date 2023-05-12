@@ -43,6 +43,7 @@ Just Another Pokèmon Catcher, based on PokeAPI v2
 - [Tutorial React Router 6](https://reactrouter.com/en/main/start/tutorial)
 - [Install Mantine in Vite Project](https://mantine.dev/guides/vite/)
 - [Getting Started with SWR](https://swr.vercel.app/docs/getting-started)
+- [Adding a fallback in Surge.sh](https://surge.sh/help/adding-a-200-page-for-client-side-routing)
 
 ---
 
