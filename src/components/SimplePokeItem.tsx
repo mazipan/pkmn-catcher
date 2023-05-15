@@ -64,6 +64,7 @@ export default function SimplePokeItem({ item, withBookmark }: SimplePokeItemPro
           component={Link}
           to={`/detail/${item.id}`}
           rightIcon={<IconArrowRight size='1.1rem' />}
+          data-testid={`btn-detail-${item.name}`}
         >
           See Detail
         </Button>

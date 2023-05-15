@@ -2,6 +2,8 @@
 
 Just Another Pokèmon Catcher, based on PokeAPI v2
 
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fpkmn-catcher.surge.sh%2F&?cacheSeconds=3600) [![codecov](https://codecov.io/github/mazipan/pkmn-catcher/branch/master/graph/badge.svg?token=94H5FAYET5)](https://codecov.io/github/mazipan/pkmn-catcher)
+
 ## Live
 
 - [pkmn-catcher.surge.sh](https://pkmn-catcher.surge.sh)
@@ -36,6 +38,7 @@ Just Another Pokèmon Catcher, based on PokeAPI v2
 - [SWR](https://swr.vercel.app/)
 - [Tabler Icon](https://tabler-icons.io/)
 - [LocalForage](https://github.com/localForage/localForage)
+- [Vitest](https://vitest.dev/guide/)
 
 ## Read more
 
@@ -44,6 +47,7 @@ Just Another Pokèmon Catcher, based on PokeAPI v2
 - [Install Mantine in Vite Project](https://mantine.dev/guides/vite/)
 - [Getting Started with SWR](https://swr.vercel.app/docs/getting-started)
 - [Adding a fallback in Surge.sh](https://surge.sh/help/adding-a-200-page-for-client-side-routing)
+- [Setup Vitest, Testing Library, and msw](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib-msw)
 
 ---
 
