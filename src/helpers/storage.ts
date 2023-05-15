@@ -5,7 +5,7 @@ import { STORAGE_DB } from './constants';
 import { PokemonListItemParsed } from '~/types/Pokemon';
 
 localForage.config({
-  driver: localForage.INDEXEDDB,
+  driver: process.env.NODE_ENV === 'test' ? localForage.LOCALSTORAGE : localForage.INDEXEDDB,
   name: STORAGE_DB.BOOKMARK,
   version: 1.0,
 });
