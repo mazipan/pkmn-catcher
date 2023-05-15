@@ -30,7 +30,7 @@ export const pokemonsMockPage1 = {
 
 // Define handlers that catch the corresponding requests and returns the mock data.
 export const handlers = [
-  rest.get('https://pokeapi.co/api/v2/pokemon/', (req, res, ctx) => {
+  rest.get('https://pokeapi.co/api/v2/pokemon/', (_req, res, ctx) => {
     return res(ctx.status(200), ctx.json(pokemonsMockPage1));
   }),
 ];
